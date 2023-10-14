@@ -25,7 +25,7 @@ function Grid() {
   const [userTickets, setUserTickets] = useState(0);
   const [quantity, setQuantity] = useState<number>(1);
   const { contract, isLoading } = useContract(
-    process.env.NEXT_PUBLIC_LOTTERY_CONTRACT_ADDRESS
+    "0x36Bbe7Ec2C3d3c92479F03B1a7607532a7d83aF6"
   );
   const { data: expiration } = useContractRead(contract, "expiration");
   const { data: remainingTickets } = useContractRead(
@@ -91,7 +91,7 @@ function Grid() {
           <div className="px-5 sub-title">
             // Ticket -{" "}
             {ticketPrice && ethers.utils.formatEther(ticketPrice.toString())}{" "}
-            {currency} // Commission - 0.001 MATIC //
+            {currency} // Commission - 0.1 CRO //
           </div>
           <div className="flex flex-col items-center mx-5 my-9">
             <div className="flex items-center bg-white/20 rounded-xl p-2 border border-black/20 w-full">

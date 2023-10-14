@@ -13,7 +13,7 @@ import { currency } from "../constants";
 
 function GridMarquee() {
   const { contract, isLoading } = useContract(
-    process.env.NEXT_PUBLIC_LOTTERY_CONTRACT_ADDRESS
+    "0x36Bbe7Ec2C3d3c92479F03B1a7607532a7d83aF6"
   );
   const { data: lastWinner } = useContractRead(contract, "lastWinner");
   const { data: lastWinnerAmount } = useContractRead(

@@ -17,10 +17,10 @@ function GridMenu() {
   const address = useAddress();
   const loginWithMetaMask = useMetamask();
   const provider = new ethers.providers.JsonRpcProvider(
-    "https://rpc-mumbai.maticvigil.com/"
+    "https://mainnet.cronoslabs.com/v1/55e37d8975113ae7a44603ef8ce460aa"
   );
   const { contract, isLoading } = useContract(
-    process.env.NEXT_PUBLIC_LOTTERY_CONTRACT_ADDRESS
+    "0x36Bbe7Ec2C3d3c92479F03B1a7607532a7d83aF6"
   );
   const { data: winnings } = useContractRead(
     contract,
